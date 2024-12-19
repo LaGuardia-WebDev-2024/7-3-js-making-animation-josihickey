@@ -5,6 +5,8 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var x=10;
+var speed=1;
 
 
 //🟢Draw Function - Runs on Repeat
@@ -24,8 +26,25 @@ draw = function(){
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(x, 350, 10, 10);
+  
+  sunSize=sunSize+1;
+  x=x+speed;
+  
+  if(sunSize > 400){
+sunSize = 30;
 }
+
+  if(x > 400){
+  speed=-1;
+  };
+  
+  if (x < 0){
+  speed=1;
+  };
+}
+
+
 
 
 //🟡Extra FUN Features Ms. Hall Added
